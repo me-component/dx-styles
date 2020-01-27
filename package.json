@@ -1,5 +1,5 @@
 {
-  "name": "monitel-web-styles",
+  "name": "dx-styles",
   "version": "1.5.0",
   "description": "",
   "main": "index.js",
@@ -10,6 +10,8 @@
     "type": "git",
     "url": "git+ssh://cl-tfs2018.monitel.local:22/tfs/CK-11/WebDev/_git/WebStyles"
   },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" },
+
   "author": "",
   "license": "ISC"
 }
