@@ -1,0 +1,33 @@
+
+.scroll-custom {
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0, 0, 0, 0.2) rgba(0, 0, 0, 0.05);
+
+
+  &::-webkit-scrollbar,
+  &.dx-scrollable-native .dx-scrollable-container::-webkit-scrollbar {
+    width: auto;
+  }
+
+  &::-webkit-scrollbar-track,
+  &.dx-scrollable-native .dx-scrollable-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb,
+  &.dx-scrollable-native .dx-scrollable-container::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 1px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover,
+  &.dx-scrollable-native .dx-scrollable-container::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-corner{
+    background: rgba(0, 0, 0, 0.05);;
+  }
+}

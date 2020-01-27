@@ -1,0 +1,42 @@
+/*
+------Placeholder block-------
+<div class="placeholder-block" [title]="placeholder" [class.placeholder-active]="boolean">
+// активный плэйсхолдер
+<div class="placeholder-block placeholder-active" title="{text_placeholder}">
+*/
+.placeholder-block {
+  position: relative;
+  min-height: 16px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  transition: padding-top 0.2s, padding-bottom 0.2s;
+}
+.placeholder-block[title]:not([title=""]):before {
+  content: attr(title);
+  display: block;
+  position: absolute;
+  left: 0;
+  line-height: 12px;
+  line-height: initial;
+  transition: color 0.2s, top 0.2s, font-size 0.2s, transform 0.2s;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-size: initial;
+  color: rgba(128, 128, 128, 0.8);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+.placeholder-block[title]:not([title=""]).placeholder-active {
+  padding-top: 14px;
+  padding-bottom: 0;
+}
+.placeholder-block[title]:not([title=""]).placeholder-active:before {
+  color: #35547b;
+  top: 0;
+  font-size: 12px;
+  transform: translateY(0);
+}
+/*# sourceMappingURL=inputs.css.map */

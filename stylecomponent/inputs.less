@@ -1,0 +1,56 @@
+/*
+------Placeholder block-------
+<div class="placeholder-block" [title]="placeholder" [class.placeholder-active]="boolean">
+// активный плэйсхолдер
+<div class="placeholder-block placeholder-active" title="{text_placeholder}">
+*/
+
+.placeholder-block {
+  @placeholder-height: 12px;
+  @placeholder-speed: 0.2s;
+
+  position: relative;
+  min-height: @placeholder-height+4;
+
+  padding-top: @placeholder-height/2 + 1px;
+  padding-bottom: @placeholder-height/2 + 1px;
+  transition: padding-top @placeholder-speed, padding-bottom @placeholder-speed;
+
+  &[title] {
+    &:not([title=""]) {
+      &:before {
+        content: attr(title);
+        display: block;
+        position: absolute;
+        left: 0;
+        line-height: @placeholder-height;
+        line-height: initial;
+        transition: color @placeholder-speed, top @placeholder-speed, font-size @placeholder-speed, transform @placeholder-speed;
+        //z-index: 100;
+
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: @placeholder-height+2px;
+        font-size: initial;
+        color: rgba(128, 128, 128, 0.8);
+
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 100%;
+      }
+
+      &.placeholder-active {
+        padding-top: @placeholder-height + 2px;
+        padding-bottom: 0;
+
+        &:before {
+          color: #35547b;
+          top: 0;
+          font-size: @placeholder-height;
+          transform: translateY(0);
+        }
+      }
+    }
+  }
+}
