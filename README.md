@@ -1,12 +1,8 @@
 # Установка
 Стили для приложения 
 
-старый вариант
-```
 
-$ npm install "git+ssh://cl-tfs2018.monitel.local:22/tfs/CK-11/WebDev/_git/WebStyles"
 
-```
 новый вариант с версионностью
 
 ```
